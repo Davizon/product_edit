@@ -15,25 +15,30 @@ class CreateTableViewEdits extends Migration
     {
         Schema::create('view_edits', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('vendor_id');
-            $table->unsignedInteger('user_id');
-            $table->string('sku');
+            $table->string('product_code');
+            $table->text('aditional_column_name');
+            $table->text('aditional_column_value');
+            $table->string('language');
             $table->text('category');
             $table->decimal('list_price');
             $table->decimal('price');
             $table->decimal('weight');
             $table->decimal('quantity');
-            $table->decimal('min_quantity');
             $table->string('detailed_image');
-            $table->text('name');
+            $table->string('product_name');
             $table->text('description');
+            $table->string('detailed_image');
+            $table->text('meta_keywords');
             $table->text('meta_description');
             $table->text('page_title');
             $table->text('options');
             $table->text('short_description');
             $table->string('status');
-            $table->integer('status_edit');
+            $table->string('vendor');
             $table->string('brand');
+            $table->string('features');
+            $table->integer('status_edit');
+            $table->unsignedInteger('user_id');
             $table->timestamps();
         });
     }
