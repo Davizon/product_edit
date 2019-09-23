@@ -27,7 +27,6 @@ class CreateTableViewEdits extends Migration
             $table->string('detailed_image');
             $table->string('product_name');
             $table->text('description');
-            $table->string('detailed_image');
             $table->text('meta_keywords');
             $table->text('meta_description');
             $table->text('page_title');

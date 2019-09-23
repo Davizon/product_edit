@@ -13,7 +13,7 @@ class CreateTableFormImports extends Migration
      */
     public function up()
     {
-        Schema::create('form_Imports', function (Blueprint $table) {
+        Schema::create('form_imports', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('head_excel');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateTableFormImports extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('form_Imports');
+        Schema::dropIfExists('form_imports');
     }
 }
